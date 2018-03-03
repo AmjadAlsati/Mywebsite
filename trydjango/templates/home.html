@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Main Signin</title>
+</head>
+<body>
+<h1>{{title}}</h1>
+
+<div width="10 px">
+<form method="POST" action="">{% csrf_token%}
+{{form.as_p}}
+<input type="submit" value="Sign in" >
+</form>
+</div>
+{% if invalid %}
+  <font size="3" color="red">  Your Username/Password combination doesn't exist </font>
+{% endif %}
+
+</body>

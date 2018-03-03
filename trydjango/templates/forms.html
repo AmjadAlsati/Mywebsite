@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Main Signin</title>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Slider Control</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <form method="post" action=" "> {% csrf_token%}
+                <label for="max_velocity">max_velocity:</label>
+                <input type="range" name="max_velocity" id="max_velocity" value="0.4" min="0" max="2.0" step="0.02" />
+
+                <label for="max_turn_rate">max_turn_rate:</label>
+                <input type="range" name="max_turn_rate" id="max_turn_rate" value="4" min="0" max="10" step="0.1" />
+
+                <label for="line_row_location">line_row_location:</label>
+                <input type="range" name="line_row_location" id="line_row_location" value="15" min="0" max="480" />
+
+                <label for="LF_K_p">LF_K_p:</label>
+                <input type="range" name="LF_K_p" id="LF_K_p" value="0.14" min="0" max="1" step="0.01" />
+
+                <label for="LF_K_i">LF_K_i:</label>
+                <input type="range" name="LF_K_i" id="LF_K_i" value="0.2" min="0" max="1" step="0.01" />
+
+                <label for="LF_K_d">LF_K_d:</label>
+                <input type="range" name="LF_K_d" id="LF_K_d" value="0.09" min="0" max="1" step="0.01" />
+
+                <label for="LF_windup_limit">LF_windup_limit:</label>
+                <input type="range" name="LF_windup_limit" id="LF_windup_limit" value="0.8" min="0" max="5" step="0.05" />
+
+                <label for="target_distance">target_distance:</label>
+                <input type="range" name="target_distance" id="target_distance" value="15" min="0" max="50" step="0.5" />
+
+                <label for=" BD_K_p ">BD_K_p:</label>
+                <input type="range" name="BD_K_p" id="BD_K_p" value="0.03" min="0" max="1" step="0.01" />
+
+                <label for=" BD_K_i ">BD_K_i:</label>
+                <input type="range" name="BD_K_i" id="BD_K_i" value="0.00016" min="0" max="1" step="0.00001" />
+
+
+                <label for=" BD_K_d ">BD_K_d:</label>
+                <input type="range" name="BD_K_d" id="BD_K_d" value="0.0013" min="0" max="1" step="0.0001" />
+
+                <label for=" BD_windup_limit ">BD__windup_limit:</label>
+                <input type="range" name="BD_windup_limit" id="BD_windup_limit" value="1.5" min="0" max="5" step="0.05" />
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
